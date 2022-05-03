@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function first(){
+    alert("First")
+}
+function second(){
+    alert("Second")
+    event.stopPropagation();
+}
+function third(){
+    alert("Third")
+}
+function fourth(){
+    alert("Fourth")
+    
+}
+</script>
+    <div onclick = first()>
+        <div onclick = second()>
+            <div onclick = third()>
+                <button onclick = fourth()>submit</button></div>
+        </div>
+    </div>
+     
+
+</body>
+</html>
